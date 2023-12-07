@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>markPendingPriorityLevel | 王亚宁的个人学习</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.99b5bf8c.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/23.eca9f50e.js" as="script"><link rel="prefetch" href="/assets/js/10.6d1d7980.js"><link rel="prefetch" href="/assets/js/11.25fb5d69.js"><link rel="prefetch" href="/assets/js/12.bc1ec79e.js"><link rel="prefetch" href="/assets/js/13.374735a3.js"><link rel="prefetch" href="/assets/js/14.d1314cfe.js"><link rel="prefetch" href="/assets/js/15.17b5a911.js"><link rel="prefetch" href="/assets/js/16.e0c10874.js"><link rel="prefetch" href="/assets/js/17.ac034782.js"><link rel="prefetch" href="/assets/js/18.ad32bacc.js"><link rel="prefetch" href="/assets/js/19.feb7eb65.js"><link rel="prefetch" href="/assets/js/20.4d1669ae.js"><link rel="prefetch" href="/assets/js/21.58e133ab.js"><link rel="prefetch" href="/assets/js/22.4fda5adb.js"><link rel="prefetch" href="/assets/js/24.e6e7dbdc.js"><link rel="prefetch" href="/assets/js/25.c9789b89.js"><link rel="prefetch" href="/assets/js/26.156cb2a0.js"><link rel="prefetch" href="/assets/js/27.eb596818.js"><link rel="prefetch" href="/assets/js/28.fa8f9629.js"><link rel="prefetch" href="/assets/js/29.2013f0a2.js"><link rel="prefetch" href="/assets/js/3.dca13282.js"><link rel="prefetch" href="/assets/js/30.88192890.js"><link rel="prefetch" href="/assets/js/31.b02f53c7.js"><link rel="prefetch" href="/assets/js/32.d9d2cc26.js"><link rel="prefetch" href="/assets/js/33.81844ad5.js"><link rel="prefetch" href="/assets/js/34.becf5ac9.js"><link rel="prefetch" href="/assets/js/35.e3e5a33b.js"><link rel="prefetch" href="/assets/js/36.215dbd6f.js"><link rel="prefetch" href="/assets/js/37.84c02384.js"><link rel="prefetch" href="/assets/js/38.a4c03307.js"><link rel="prefetch" href="/assets/js/39.3640528f.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.d07751f5.js"><link rel="prefetch" href="/assets/js/41.ca2fb91b.js"><link rel="prefetch" href="/assets/js/42.29bd46cc.js"><link rel="prefetch" href="/assets/js/43.078b0578.js"><link rel="prefetch" href="/assets/js/44.8bc1ef68.js"><link rel="prefetch" href="/assets/js/45.b63b3129.js"><link rel="prefetch" href="/assets/js/46.baf5c7c5.js"><link rel="prefetch" href="/assets/js/47.553e39ba.js"><link rel="prefetch" href="/assets/js/48.3b0f6b8f.js"><link rel="prefetch" href="/assets/js/49.0711a1e9.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.7717d267.js"><link rel="prefetch" href="/assets/js/6.820ab661.js"><link rel="prefetch" href="/assets/js/7.7f0c0f6a.js"><link rel="prefetch" href="/assets/js/8.8733fc27.js"><link rel="prefetch" href="/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王亚宁的个人学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>react源码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/react.html" class="sidebar-link">React</a></li><li><a href="/react/ref.html" class="sidebar-link">createRef</a></li><li><a href="/react/scheduler.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/react-16.6.html" class="sidebar-link">React16.6</a></li><li><a href="/react/react-scheduler.html" class="sidebar-link">react scheduler</a></li><li><a href="/react/component.html" class="sidebar-link">React.Component</a></li><li><a href="/react/context.html" class="sidebar-link">Stack</a></li><li><a href="/react/diff-properties.html" class="sidebar-link">diffProperties</a></li><li><a href="/react/finalizeInitialChildren.html" class="sidebar-link">finalizeInitialChildren</a></li><li><a href="/react/hooks-common.html" class="sidebar-link">阅读源码后，来讲讲React Hokks是怎么实现的</a></li><li><a href="/react/hooks.html" class="sidebar-link">从源码看Hooks</a></li><li><a href="/react/complete-unit-of-work.html" class="sidebar-link">completeUnitOfWork</a></li><li><a href="/react/complete-work.html" class="sidebar-link">completeWork</a></li><li><a href="/react/pending-priority-methods.html" aria-current="page" class="active sidebar-link">markPendingPriorityLevel</a></li><li><a href="/react/pending-priority.html" class="sidebar-link">PendingPriority</a></li><li><a href="/react/stack-context.html" class="sidebar-link">Stack</a></li><li><a href="/react/start.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/suspense-core.html" class="sidebar-link">Suspense</a></li><li><a href="/react/suspense.html" class="sidebar-link">开启</a></li><li><a href="/react/time.html" class="sidebar-link">Time About</a></li><li><a href="/react/unwind-work.html" class="sidebar-link">unwindWork</a></li><li><a href="/react/update-queue.html" class="sidebar-link">updateQueue</a></li><li><a href="/react/why-new-context-api.html" class="sidebar-link">Context API</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="markpendingprioritylevel"><a href="#markpendingprioritylevel" class="header-anchor">#</a> markPendingPriorityLevel</h1> <p>每次有正在执行的任务进入的时候，就会调用这个方法，用来记录最大和最小的<code>pending</code>任务</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">markPendingPriorityLevel</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">root</span><span class="token operator">:</span> FiberRoot<span class="token punctuation">,</span>
+  <span class="token literal-property property">expirationTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token comment">// If there's a gap between completing a failed root and retrying it,</span>
+  <span class="token comment">// additional updates may be scheduled. Clear `didError`, in case the update</span>
+  <span class="token comment">// is sufficient to fix the error.</span>
+  root<span class="token punctuation">.</span>didError <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Update the latest and earliest pending times</span>
+  <span class="token keyword">const</span> earliestPendingTime <span class="token operator">=</span> root<span class="token punctuation">.</span>earliestPendingTime<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>earliestPendingTime <span class="token operator">===</span> NoWork<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// No other pending updates.</span>
+    root<span class="token punctuation">.</span>earliestPendingTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestPendingTime <span class="token operator">=</span> expirationTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>earliestPendingTime <span class="token operator">&gt;</span> expirationTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// This is the earliest pending update.</span>
+      root<span class="token punctuation">.</span>earliestPendingTime <span class="token operator">=</span> expirationTime<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> latestPendingTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestPendingTime<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>latestPendingTime <span class="token operator">&lt;</span> expirationTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// This is the latest pending update</span>
+        root<span class="token punctuation">.</span>latestPendingTime <span class="token operator">=</span> expirationTime<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">findNextExpirationTimeToWorkOn</span><span class="token punctuation">(</span>expirationTime<span class="token punctuation">,</span> root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h1 id="marksuspendedprioritylevel"><a href="#marksuspendedprioritylevel" class="header-anchor">#</a> markSuspendedPriorityLevel</h1> <p>用来设置<code>suspendedPriority</code>，分两部分</p> <p>前一部分用来判断<code>PendingTime</code>是否和<code>suspendedTime</code>一样，<strong>如果是一样代表这个任务之前调用过<code>markPendingPriorityLevel</code>，比如在<code>scheduleWork</code>的时候，那么现在这个任务被<code>suspended</code>了，则代表这个已经不是<code>pendingTime</code>了，而是<code>suspendedTime</code>了</strong></p> <p>这里我们可以发现我们记录的永远只有两个值，最大和最小的，而寻找的时候找的基本上也是最小的</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">markSuspendedPriorityLevel</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">root</span><span class="token operator">:</span> FiberRoot<span class="token punctuation">,</span>
+  <span class="token literal-property property">suspendedTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  root<span class="token punctuation">.</span>didError <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token function">clearPing</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> suspendedTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// First, check the known pending levels and update them if needed.</span>
+  <span class="token keyword">const</span> earliestPendingTime <span class="token operator">=</span> root<span class="token punctuation">.</span>earliestPendingTime<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> latestPendingTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestPendingTime<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>earliestPendingTime <span class="token operator">===</span> suspendedTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>latestPendingTime <span class="token operator">===</span> suspendedTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Both known pending levels were suspended. Clear them.</span>
+      root<span class="token punctuation">.</span>earliestPendingTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestPendingTime <span class="token operator">=</span> NoWork<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// The earliest pending level was suspended. Clear by setting it to the</span>
+      <span class="token comment">// latest pending level.</span>
+      root<span class="token punctuation">.</span>earliestPendingTime <span class="token operator">=</span> latestPendingTime<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>latestPendingTime <span class="token operator">===</span> suspendedTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// The latest pending level was suspended. Clear by setting it to the</span>
+    <span class="token comment">// latest pending level.</span>
+    root<span class="token punctuation">.</span>latestPendingTime <span class="token operator">=</span> earliestPendingTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Finally, update the known suspended levels.</span>
+  <span class="token keyword">const</span> earliestSuspendedTime <span class="token operator">=</span> root<span class="token punctuation">.</span>earliestSuspendedTime<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> latestSuspendedTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestSuspendedTime<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>earliestSuspendedTime <span class="token operator">===</span> NoWork<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// No other suspended levels.</span>
+    root<span class="token punctuation">.</span>earliestSuspendedTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestSuspendedTime <span class="token operator">=</span> suspendedTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>earliestSuspendedTime <span class="token operator">&gt;</span> suspendedTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// This is the earliest suspended level.</span>
+      root<span class="token punctuation">.</span>earliestSuspendedTime <span class="token operator">=</span> suspendedTime<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>latestSuspendedTime <span class="token operator">&lt;</span> suspendedTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// This is the latest suspended level</span>
+      root<span class="token punctuation">.</span>latestSuspendedTime <span class="token operator">=</span> suspendedTime<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">findNextExpirationTimeToWorkOn</span><span class="token punctuation">(</span>suspendedTime<span class="token punctuation">,</span> root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h1 id="findnextexpirationtimetoworkon"><a href="#findnextexpirationtimetoworkon" class="header-anchor">#</a> findNextExpirationTimeToWorkOn</h1> <p>首先说结论：</p> <ol><li>root.expirationTime是在四个里面找最小非<code>NoWork</code>的</li> <li>root.nextExpirationTimeToWorkOn是找当前任务的下一个</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>
+  nextExpirationTimeToWorkOn <span class="token operator">===</span> NoWork <span class="token operator">&amp;&amp;</span>
+  <span class="token punctuation">(</span>completedExpirationTime <span class="token operator">===</span> NoWork <span class="token operator">||</span>
+    latestSuspendedTime <span class="token operator">&gt;</span> completedExpirationTime<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre></div><p>这个判断就是如果<code>earliestPendingTime</code>和<code>latestPingedTime</code>都不存在，那么选<code>latestSuspendedTime</code>，为什么不选<code>earliestSuspendedTime</code>？因为<code>nextExpirationTimeToWorkOn</code>是下一个任务，不是目前正在执行的，所以如果<code>earliestSuspendedTime</code>存在并且符合两个<code>pendingTime</code>都是<code>NoWork</code>，说明<code>earliestSuspendedTime</code>就是当前的任务过期时间，除非<code>earliestSuspendedTime</code>也是<code>NoWork</code>，那么<code>root.nextExpirationTimeToWorkOn</code>和<code>root.expirationTime</code>都是<code>latestSuspendedTime</code>。也有可能<code>latestSuspendedTime</code>也是<code>NoWork</code>，但这个就不需要判断了。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">findNextExpirationTimeToWorkOn</span><span class="token punctuation">(</span><span class="token parameter">completedExpirationTime<span class="token punctuation">,</span> root</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> earliestSuspendedTime <span class="token operator">=</span> root<span class="token punctuation">.</span>earliestSuspendedTime<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> latestSuspendedTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestSuspendedTime<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> earliestPendingTime <span class="token operator">=</span> root<span class="token punctuation">.</span>earliestPendingTime<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> latestPingedTime <span class="token operator">=</span> root<span class="token punctuation">.</span>latestPingedTime<span class="token punctuation">;</span>
+
+  <span class="token comment">// Work on the earliest pending time. Failing that, work on the latest</span>
+  <span class="token comment">// pinged time.</span>
+  <span class="token keyword">let</span> nextExpirationTimeToWorkOn <span class="token operator">=</span>
+    earliestPendingTime <span class="token operator">!==</span> NoWork <span class="token operator">?</span> earliestPendingTime <span class="token operator">:</span> latestPingedTime<span class="token punctuation">;</span>
+
+  <span class="token comment">// If there is no pending or pinged work, check if there's suspended work</span>
+  <span class="token comment">// that's lower priority than what we just completed.</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    nextExpirationTimeToWorkOn <span class="token operator">===</span> NoWork <span class="token operator">&amp;&amp;</span>
+    <span class="token punctuation">(</span>completedExpirationTime <span class="token operator">===</span> NoWork <span class="token operator">||</span>
+      latestSuspendedTime <span class="token operator">&gt;</span> completedExpirationTime<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// The lowest priority suspended work is the work most likely to be</span>
+    <span class="token comment">// committed next. Let's start rendering it again, so that if it times out,</span>
+    <span class="token comment">// it's ready to commit.</span>
+    nextExpirationTimeToWorkOn <span class="token operator">=</span> latestSuspendedTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">let</span> expirationTime <span class="token operator">=</span> nextExpirationTimeToWorkOn<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    expirationTime <span class="token operator">!==</span> NoWork <span class="token operator">&amp;&amp;</span>
+    earliestSuspendedTime <span class="token operator">!==</span> NoWork <span class="token operator">&amp;&amp;</span>
+    earliestSuspendedTime <span class="token operator">&lt;</span> expirationTime
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Expire using the earliest known expiration time.</span>
+    expirationTime <span class="token operator">=</span> earliestSuspendedTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  root<span class="token punctuation">.</span>nextExpirationTimeToWorkOn <span class="token operator">=</span> nextExpirationTimeToWorkOn<span class="token punctuation">;</span>
+  root<span class="token punctuation">.</span>expirationTime <span class="token operator">=</span> expirationTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h1 id="nextlatestabsolutetimeoutms"><a href="#nextlatestabsolutetimeoutms" class="header-anchor">#</a> nextLatestAbsoluteTimeoutMs</h1> <p>这个是你设置在<code>placehoder</code>上的<code>delayMs</code>以及如果有（多层？）的情况下，计算出来的下一次根据props应该设置的过期时间的具体时间，在这个时间上会强制执行一次渲染</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// throwException</span>
+<span class="token keyword">let</span> absoluteTimeoutMs<span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>earliestTimeoutMs <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  absoluteTimeoutMs <span class="token operator">=</span> maxSigned31BitInt<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>startTimeMs <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> earliestExpirationTime <span class="token operator">=</span> <span class="token function">findEarliestOutstandingPriorityLevel</span><span class="token punctuation">(</span>
+      root<span class="token punctuation">,</span>
+      renderExpirationTime<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> earliestExpirationTimeMs <span class="token operator">=</span> <span class="token function">expirationTimeToMs</span><span class="token punctuation">(</span>
+      earliestExpirationTime<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    startTimeMs <span class="token operator">=</span> earliestExpirationTimeMs <span class="token operator">-</span> <span class="token constant">LOW_PRIORITY_EXPIRATION</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  absoluteTimeoutMs <span class="token operator">=</span> startTimeMs <span class="token operator">+</span> earliestTimeoutMs<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">renderDidSuspend</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> absoluteTimeoutMs<span class="token punctuation">,</span> renderExpirationTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// renderDidSuspend</span>
+<span class="token keyword">function</span> <span class="token function">renderDidSuspend</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">root</span><span class="token operator">:</span> FiberRoot<span class="token punctuation">,</span>
+  <span class="token literal-property property">absoluteTimeoutMs</span><span class="token operator">:</span> number<span class="token punctuation">,</span>
+  <span class="token literal-property property">suspendedTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Schedule the timeout.</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    absoluteTimeoutMs <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span>
+    nextLatestAbsoluteTimeoutMs <span class="token operator">&lt;</span> absoluteTimeoutMs
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    nextLatestAbsoluteTimeoutMs <span class="token operator">=</span> absoluteTimeoutMs<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// renderRoot</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>enableSuspense <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isExpired <span class="token operator">&amp;&amp;</span> nextLatestAbsoluteTimeoutMs <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// The tree was suspended.</span>
+  <span class="token keyword">const</span> suspendedExpirationTime <span class="token operator">=</span> expirationTime<span class="token punctuation">;</span>
+  <span class="token function">markSuspendedPriorityLevel</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> suspendedExpirationTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Find the earliest uncommitted expiration time in the tree, including</span>
+  <span class="token comment">// work that is suspended. The timeout threshold cannot be longer than</span>
+  <span class="token comment">// the overall expiration.</span>
+  <span class="token keyword">const</span> earliestExpirationTime <span class="token operator">=</span> <span class="token function">findEarliestOutstandingPriorityLevel</span><span class="token punctuation">(</span>
+    root<span class="token punctuation">,</span>
+    expirationTime<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> earliestExpirationTimeMs <span class="token operator">=</span> <span class="token function">expirationTimeToMs</span><span class="token punctuation">(</span>earliestExpirationTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>earliestExpirationTimeMs <span class="token operator">&lt;</span> nextLatestAbsoluteTimeoutMs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    nextLatestAbsoluteTimeoutMs <span class="token operator">=</span> earliestExpirationTimeMs<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Subtract the current time from the absolute timeout to get the number</span>
+  <span class="token comment">// of milliseconds until the timeout. In other words, convert an absolute</span>
+  <span class="token comment">// timestamp to a relative time. This is the value that is passed</span>
+  <span class="token comment">// to `setTimeout`.</span>
+  <span class="token keyword">const</span> currentTimeMs <span class="token operator">=</span> <span class="token function">expirationTimeToMs</span><span class="token punctuation">(</span><span class="token function">requestCurrentTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> msUntilTimeout <span class="token operator">=</span> nextLatestAbsoluteTimeoutMs <span class="token operator">-</span> currentTimeMs<span class="token punctuation">;</span>
+  msUntilTimeout <span class="token operator">=</span> msUntilTimeout <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> msUntilTimeout<span class="token punctuation">;</span>
+
+  <span class="token comment">// TODO: Account for the Just Noticeable Difference</span>
+
+  <span class="token keyword">const</span> rootExpirationTime <span class="token operator">=</span> root<span class="token punctuation">.</span>expirationTime<span class="token punctuation">;</span>
+  <span class="token function">onSuspend</span><span class="token punctuation">(</span>
+    root<span class="token punctuation">,</span>
+    rootWorkInProgress<span class="token punctuation">,</span>
+    suspendedExpirationTime<span class="token punctuation">,</span>
+    rootExpirationTime<span class="token punctuation">,</span>
+    msUntilTimeout<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">onSuspend</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">root</span><span class="token operator">:</span> FiberRoot<span class="token punctuation">,</span>
+  <span class="token literal-property property">finishedWork</span><span class="token operator">:</span> Fiber<span class="token punctuation">,</span>
+  <span class="token literal-property property">suspendedExpirationTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span>
+  <span class="token literal-property property">rootExpirationTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span>
+  <span class="token literal-property property">msUntilTimeout</span><span class="token operator">:</span> number<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  root<span class="token punctuation">.</span>expirationTime <span class="token operator">=</span> rootExpirationTime<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>enableSuspense <span class="token operator">&amp;&amp;</span> msUntilTimeout <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">shouldYield</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Don't wait an additional tick. Commit the tree immediately.</span>
+    root<span class="token punctuation">.</span>pendingCommitExpirationTime <span class="token operator">=</span> suspendedExpirationTime<span class="token punctuation">;</span>
+    root<span class="token punctuation">.</span>finishedWork <span class="token operator">=</span> finishedWork<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>msUntilTimeout <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Wait `msUntilTimeout` milliseconds before committing.</span>
+    root<span class="token punctuation">.</span>timeoutHandle <span class="token operator">=</span> <span class="token function">scheduleTimeout</span><span class="token punctuation">(</span>
+      <span class="token function">onTimeout</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> root<span class="token punctuation">,</span> finishedWork<span class="token punctuation">,</span> suspendedExpirationTime<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      msUntilTimeout<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">onTimeout</span><span class="token punctuation">(</span><span class="token parameter">root<span class="token punctuation">,</span> finishedWork<span class="token punctuation">,</span> suspendedExpirationTime</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>enableSuspense<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// The root timed out. Commit it.</span>
+    root<span class="token punctuation">.</span>pendingCommitExpirationTime <span class="token operator">=</span> suspendedExpirationTime<span class="token punctuation">;</span>
+    root<span class="token punctuation">.</span>finishedWork <span class="token operator">=</span> finishedWork<span class="token punctuation">;</span>
+    <span class="token comment">// Read the current time before entering the commit phase. We can be</span>
+    <span class="token comment">// certain this won't cause tearing related to batching of event updates</span>
+    <span class="token comment">// because we're at the top of a timer event.</span>
+    <span class="token function">recomputeCurrentRendererTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    currentSchedulerTime <span class="token operator">=</span> currentRendererTime<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>enableSchedulerTracing<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Don't update pending interaction counts for suspense timeouts,</span>
+      <span class="token comment">// Because we know we still need to do more work in this case.</span>
+      suspenseDidTimeout <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token function">flushRoot</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> suspendedExpirationTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      suspenseDidTimeout <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">flushRoot</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> suspendedExpirationTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/complete-work.html" class="prev">
+        completeWork
+      </a></span> <span class="next"><a href="/react/pending-priority.html">
+        PendingPriority
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99b5bf8c.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/23.eca9f50e.js" defer></script>
+  </body>
+</html>

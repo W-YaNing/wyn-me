@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Context API | 王亚宁的个人学习</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.99b5bf8c.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/38.a4c03307.js" as="script"><link rel="prefetch" href="/assets/js/10.6d1d7980.js"><link rel="prefetch" href="/assets/js/11.25fb5d69.js"><link rel="prefetch" href="/assets/js/12.bc1ec79e.js"><link rel="prefetch" href="/assets/js/13.374735a3.js"><link rel="prefetch" href="/assets/js/14.d1314cfe.js"><link rel="prefetch" href="/assets/js/15.17b5a911.js"><link rel="prefetch" href="/assets/js/16.e0c10874.js"><link rel="prefetch" href="/assets/js/17.ac034782.js"><link rel="prefetch" href="/assets/js/18.ad32bacc.js"><link rel="prefetch" href="/assets/js/19.feb7eb65.js"><link rel="prefetch" href="/assets/js/20.4d1669ae.js"><link rel="prefetch" href="/assets/js/21.58e133ab.js"><link rel="prefetch" href="/assets/js/22.4fda5adb.js"><link rel="prefetch" href="/assets/js/23.eca9f50e.js"><link rel="prefetch" href="/assets/js/24.e6e7dbdc.js"><link rel="prefetch" href="/assets/js/25.c9789b89.js"><link rel="prefetch" href="/assets/js/26.156cb2a0.js"><link rel="prefetch" href="/assets/js/27.eb596818.js"><link rel="prefetch" href="/assets/js/28.fa8f9629.js"><link rel="prefetch" href="/assets/js/29.2013f0a2.js"><link rel="prefetch" href="/assets/js/3.dca13282.js"><link rel="prefetch" href="/assets/js/30.88192890.js"><link rel="prefetch" href="/assets/js/31.b02f53c7.js"><link rel="prefetch" href="/assets/js/32.d9d2cc26.js"><link rel="prefetch" href="/assets/js/33.81844ad5.js"><link rel="prefetch" href="/assets/js/34.becf5ac9.js"><link rel="prefetch" href="/assets/js/35.e3e5a33b.js"><link rel="prefetch" href="/assets/js/36.215dbd6f.js"><link rel="prefetch" href="/assets/js/37.84c02384.js"><link rel="prefetch" href="/assets/js/39.3640528f.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.d07751f5.js"><link rel="prefetch" href="/assets/js/41.ca2fb91b.js"><link rel="prefetch" href="/assets/js/42.29bd46cc.js"><link rel="prefetch" href="/assets/js/43.078b0578.js"><link rel="prefetch" href="/assets/js/44.8bc1ef68.js"><link rel="prefetch" href="/assets/js/45.b63b3129.js"><link rel="prefetch" href="/assets/js/46.baf5c7c5.js"><link rel="prefetch" href="/assets/js/47.553e39ba.js"><link rel="prefetch" href="/assets/js/48.3b0f6b8f.js"><link rel="prefetch" href="/assets/js/49.0711a1e9.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.7717d267.js"><link rel="prefetch" href="/assets/js/6.820ab661.js"><link rel="prefetch" href="/assets/js/7.7f0c0f6a.js"><link rel="prefetch" href="/assets/js/8.8733fc27.js"><link rel="prefetch" href="/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王亚宁的个人学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>react源码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/react.html" class="sidebar-link">React</a></li><li><a href="/react/ref.html" class="sidebar-link">createRef</a></li><li><a href="/react/scheduler.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/react-16.6.html" class="sidebar-link">React16.6</a></li><li><a href="/react/react-scheduler.html" class="sidebar-link">react scheduler</a></li><li><a href="/react/component.html" class="sidebar-link">React.Component</a></li><li><a href="/react/context.html" class="sidebar-link">Stack</a></li><li><a href="/react/diff-properties.html" class="sidebar-link">diffProperties</a></li><li><a href="/react/finalizeInitialChildren.html" class="sidebar-link">finalizeInitialChildren</a></li><li><a href="/react/hooks-common.html" class="sidebar-link">阅读源码后，来讲讲React Hokks是怎么实现的</a></li><li><a href="/react/hooks.html" class="sidebar-link">从源码看Hooks</a></li><li><a href="/react/complete-unit-of-work.html" class="sidebar-link">completeUnitOfWork</a></li><li><a href="/react/complete-work.html" class="sidebar-link">completeWork</a></li><li><a href="/react/pending-priority-methods.html" class="sidebar-link">markPendingPriorityLevel</a></li><li><a href="/react/pending-priority.html" class="sidebar-link">PendingPriority</a></li><li><a href="/react/stack-context.html" class="sidebar-link">Stack</a></li><li><a href="/react/start.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/suspense-core.html" class="sidebar-link">Suspense</a></li><li><a href="/react/suspense.html" class="sidebar-link">开启</a></li><li><a href="/react/time.html" class="sidebar-link">Time About</a></li><li><a href="/react/unwind-work.html" class="sidebar-link">unwindWork</a></li><li><a href="/react/update-queue.html" class="sidebar-link">updateQueue</a></li><li><a href="/react/why-new-context-api.html" aria-current="page" class="active sidebar-link">Context API</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="context-api"><a href="#context-api" class="header-anchor">#</a> Context API</h1> <blockquote><p>React16.3发布了新的Context API，并且已经确认了将在下一个版本废弃老的Context API。所以大家更新到新的Context API是无可厚非的事情。而这篇文章会从原理的角度为大家分析为什么要用新的API--不仅仅是因为React官方要更新，毕竟更新了你也可以用16版本的React来使用老的API--而是因为新的API性能比老API <strong>高出太多</strong></p></blockquote> <h1 id="用法"><a href="#用法" class="header-anchor">#</a> 用法</h1> <p>我们先来看一下两个版本的Context API如何使用</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// old version</span>
+<span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span><span class="token punctuation">{</span>
+  <span class="token function">getChildContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token number">123</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Parent<span class="token punctuation">.</span>childContextType <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>number
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Child</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>context<span class="token punctuation">.</span>type<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token punctuation">)</span>
+
+Child<span class="token punctuation">.</span>contextTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>number
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过在父组件上声明<code>getChildContext</code>方法为其子孙组件提供<code>context</code>，我们称其<code>ProviderComponent</code>。注意必须要声明<code>Parent.childContextType</code>才会生效，而子组件如果需要使用<code>context</code>，需要显示得声明<code>Child.contextTypes</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// new version</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> Provider<span class="token punctuation">,</span> Consumer <span class="token punctuation">}</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">'defaultValue'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Parent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'realValue'</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">&gt;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Child</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token operator">&lt;</span>Consumer<span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Consumer<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>新版本的API，React提供了<code>createContext</code>方法，这个方法会返回两个<em>组件</em>：<code>Provider</code>和<code>Consumber</code>，<code>Provider</code>用来提供<code>context</code>的内容，通过向<code>Provider</code>传递<code>value</code>这个<code>prop</code>，而在需要用到对应<code>context</code>的地方，用<strong>相同来源的</strong><code>Consumer</code>来获取<code>context</code>，<code>Consumer</code>有特定的用法，就是他的<code>children</code>必须是一个方法，并且<code>context</code>的值使用参数传递给这个方法。</p> <h1 id="性能对比"><a href="#性能对比" class="header-anchor">#</a> 性能对比</h1> <p>正好前几天React devtool发布了<code>Profiler</code>功能，就用这个新功能来查看一下两个API的新能有什么差距吧，先看一下例子</p> <p><a href="https://juejin.im/post/5ba1f995f265da0a972e1657" target="_blank" rel="noopener noreferrer">不知道Profiler的看这里<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// old api demo</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">'prop-types'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">getChildContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>type
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>type <span class="token operator">+</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+App<span class="token punctuation">.</span>childContextTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>number
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">Comp</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>p key<span class="token operator">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>context<span class="token punctuation">.</span>type<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>arr<span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+Comp<span class="token punctuation">.</span>contextTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>number
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// new api demo</span>
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> createContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> Provider<span class="token punctuation">,</span> Consumer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">createContext</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>type <span class="token operator">+</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>type<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">Comp</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>p key<span class="token operator">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Consumer<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>type<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Consumer<span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>arr<span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./index.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> App<span class="token punctuation">,</span> <span class="token punctuation">{</span>Comp<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./context/OldApi'</span>
+
+<span class="token comment">// import App, { Comp } from './context/NewApi'</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>App<span class="token operator">&gt;</span><span class="token operator">&lt;</span>Comp <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>App<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre></div><p>代码基本相同，主要变动就是一个<code>interval</code>，每500毫秒给<code>type</code>加1，然后我们来分别看一下<code>Profiler</code>的截图</p> <p><a href="https://juejin.im/post/5ba1f995f265da0a972e1657" target="_blank" rel="noopener noreferrer">不知道Profiler的看这里<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h5 id="老api"><a href="#老api" class="header-anchor">#</a> 老API</h5> <p><img src="http://pegnygxjm.bkt.clouddn.com/old-context-demo1-1.png" alt="老API"></p> <h5 id="新api"><a href="#新api" class="header-anchor">#</a> 新API</h5> <p><img src="http://pegnygxjm.bkt.clouddn.com/new-context-demo1-1.png" alt="新API"></p> <p>可见这两个性能差距是非常大的，老的API需要7点几毫秒，而新的API只需要0.4毫秒，而且新的API只有两个节点重新渲染了，而老的API所有节点都重新渲染了（下面还有很多节点没截图进去，虽然每个可能只有0.1毫秒或者甚至不到，但是积少成多，导致他们的父组件Comp渲染时间很长）</p> <h1 id="进一步举例"><a href="#进一步举例" class="header-anchor">#</a> 进一步举例</h1> <p>在这里可能有些同学会想，新老API的用法不一样，因为老API的<code>context</code>是作为<code>Comp</code>这个<code>functional Component</code>的参数传入的，所以肯定会影响该组件的所有子元素，所以我在这个基础上修改了例子，把数组从<code>Comp</code>组件中移除，放到一个新的组件<code>Comp2</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// Comp2</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Comp2</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>p key<span class="token operator">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> arr
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// new old api Comp</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">Comp</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>context<span class="token punctuation">.</span>type<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// new new api Comp</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">Comp</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Consumer<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>type<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Consumer<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>现在受<code>context</code>影响的渲染内容新老API都是一样的，只有<code>&lt;p&gt;{type}&lt;/p&gt;</code>，我们再来看一下情况</p> <h5 id="老api-2"><a href="#老api-2" class="header-anchor">#</a> 老API</h5> <p><img src="http://pegnygxjm.bkt.clouddn.com/old-context-demo2-1.png" alt="老API"></p> <h5 id="新api-2"><a href="#新api-2" class="header-anchor">#</a> 新API</h5> <p><img src="http://pegnygxjm.bkt.clouddn.com/new-context-demo2-1.png" alt="新API"></p> <p><em>忽视比demo1时间长的问题，应该是我电脑运行时间长性能下降的问题，只需要横向对比新老API就可以了</em></p> <p>从这里可以看出来，结果跟Demo1没什么区别，老API中我们的<code>arr</code>仍然都被重新渲染了，导致整体的渲染时间被拉长很多。</p> <p>事实上，这可能还不是最让你震惊的地方，我们再改一下例子，我们在<code>App</code>中不再修改<code>type</code>，而是新增一个<code>state</code>叫<code>num</code>，然后对其进行递增</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// App</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">num</span><span class="token operator">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">getChildContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>type
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">num</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>num <span class="token operator">+</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>inside update <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>num<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h5 id="老api-3"><a href="#老api-3" class="header-anchor">#</a> 老API</h5> <p><img src="http://pegnygxjm.bkt.clouddn.com/old-context-demo3-1.png" alt="老API"></p> <h5 id="新api-3"><a href="#新api-3" class="header-anchor">#</a> 新API</h5> <p><img src="http://pegnygxjm.bkt.clouddn.com/new-context-deme3-1.png" alt="新API"></p> <p>可以看到老API依然没有什么改观，他依然重新渲染所有子节点。</p> <p>再进一步我给<code>Comp2</code>增加<code>componentDidUpdate</code>生命周期钩子</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'update'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在使用老API的时候，每次App更新都会打印</p> <p><img src="http://pegnygxjm.bkt.clouddn.com/old-context-update.png" alt=""></p> <p>而新API则不会</p> <h1 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h1> <p>从上面测试的结果大家应该可以看出来结果了，这里简单的讲一下原因，因为要具体分析会很长并且要涉及到源码的很多细节，所以有空再写一片续，来详细得讲解源码，大家有兴趣的可以关注我。</p> <p>要分析原理要了解React对于每次更新的处理流程，React是一个树结构，要进行更新只能通过某个节点执行<code>setState、forceUpdate</code>等方法，在某一个节点执行了这些方法之后，React会向上搜索直到找到<code>root</code>节点，然后把<code>root</code>节点放到更新队列中，等待更新。</p> <p>所以React的更新都是从<code>root</code>往下执行的，他会尝试重新构建一个新的树，在这个过程中能复用之前的节点就会复用，<strong>而我们现在看到的情况，就是因为复用算法根据不同的情况而得到的不同的结果</strong></p> <p>我们来看一小段源码</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>
+  <span class="token operator">!</span><span class="token function">hasLegacyContextChanged</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+  <span class="token punctuation">(</span>updateExpirationTime <span class="token operator">===</span> NoWork <span class="token operator">||</span>
+    updateExpirationTime <span class="token operator">&gt;</span> renderExpirationTime<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token keyword">return</span> <span class="token function">bailoutOnAlreadyFinishedWork</span><span class="token punctuation">(</span>
+    current<span class="token punctuation">,</span>
+    workInProgress<span class="token punctuation">,</span>
+    renderExpirationTime<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果能满足这个判断条件并且进入<code>bailoutOnAlreadyFinishedWork</code>，那么有极高的可能这个节点以及他的子树都不需要更新，React会直接跳过，我们使用新的<code>context API</code>的时候就是这种情况，<strong>但是使用老的<code>context API</code>是永远不可能跳过这个判断的</strong></p> <p>老的<code>context API</code>使用过程中，一旦有一个节点提供了<code>context</code>，那么他的所有子节点都会被视为有<code>side effect</code>的，因为React本身并不判断子节点是否有使用<code>context</code>，以及提供的<code>context</code>是否有变化，所以一旦检测到有节点提供了<code>context</code>，那么他的子节点在执行<code>hasLegacyContextChanged</code>的时候，永远都是true的，而没有进入<code>bailoutOnAlreadyFinishedWork</code>，就会变成重新<code>reconcile</code>子节点，虽然最终可能不需要更新DOM节点，但是重新计算生成<code>Fiber</code>对象的开销还是又得，一两个还好，数量多了时间也是会被拉长的。</p> <p>以上就是使用老的<code>context API</code>比新的API要慢很多的原因，大家可以先不深究得理解一下，在我之后的源码分析环节会有更详细的讲解。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/update-queue.html" class="prev">
+        updateQueue
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99b5bf8c.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/38.a4c03307.js" defer></script>
+  </body>
+</html>

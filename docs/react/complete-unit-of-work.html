@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>completeUnitOfWork | 王亚宁的个人学习</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.99b5bf8c.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/15.17b5a911.js" as="script"><link rel="prefetch" href="/assets/js/10.6d1d7980.js"><link rel="prefetch" href="/assets/js/11.25fb5d69.js"><link rel="prefetch" href="/assets/js/12.bc1ec79e.js"><link rel="prefetch" href="/assets/js/13.374735a3.js"><link rel="prefetch" href="/assets/js/14.d1314cfe.js"><link rel="prefetch" href="/assets/js/16.e0c10874.js"><link rel="prefetch" href="/assets/js/17.ac034782.js"><link rel="prefetch" href="/assets/js/18.ad32bacc.js"><link rel="prefetch" href="/assets/js/19.feb7eb65.js"><link rel="prefetch" href="/assets/js/20.4d1669ae.js"><link rel="prefetch" href="/assets/js/21.58e133ab.js"><link rel="prefetch" href="/assets/js/22.4fda5adb.js"><link rel="prefetch" href="/assets/js/23.eca9f50e.js"><link rel="prefetch" href="/assets/js/24.e6e7dbdc.js"><link rel="prefetch" href="/assets/js/25.c9789b89.js"><link rel="prefetch" href="/assets/js/26.156cb2a0.js"><link rel="prefetch" href="/assets/js/27.eb596818.js"><link rel="prefetch" href="/assets/js/28.fa8f9629.js"><link rel="prefetch" href="/assets/js/29.2013f0a2.js"><link rel="prefetch" href="/assets/js/3.dca13282.js"><link rel="prefetch" href="/assets/js/30.88192890.js"><link rel="prefetch" href="/assets/js/31.b02f53c7.js"><link rel="prefetch" href="/assets/js/32.d9d2cc26.js"><link rel="prefetch" href="/assets/js/33.81844ad5.js"><link rel="prefetch" href="/assets/js/34.becf5ac9.js"><link rel="prefetch" href="/assets/js/35.e3e5a33b.js"><link rel="prefetch" href="/assets/js/36.215dbd6f.js"><link rel="prefetch" href="/assets/js/37.84c02384.js"><link rel="prefetch" href="/assets/js/38.a4c03307.js"><link rel="prefetch" href="/assets/js/39.3640528f.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.d07751f5.js"><link rel="prefetch" href="/assets/js/41.ca2fb91b.js"><link rel="prefetch" href="/assets/js/42.29bd46cc.js"><link rel="prefetch" href="/assets/js/43.078b0578.js"><link rel="prefetch" href="/assets/js/44.8bc1ef68.js"><link rel="prefetch" href="/assets/js/45.b63b3129.js"><link rel="prefetch" href="/assets/js/46.baf5c7c5.js"><link rel="prefetch" href="/assets/js/47.553e39ba.js"><link rel="prefetch" href="/assets/js/48.3b0f6b8f.js"><link rel="prefetch" href="/assets/js/49.0711a1e9.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.7717d267.js"><link rel="prefetch" href="/assets/js/6.820ab661.js"><link rel="prefetch" href="/assets/js/7.7f0c0f6a.js"><link rel="prefetch" href="/assets/js/8.8733fc27.js"><link rel="prefetch" href="/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王亚宁的个人学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>react源码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/react.html" class="sidebar-link">React</a></li><li><a href="/react/ref.html" class="sidebar-link">createRef</a></li><li><a href="/react/scheduler.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/react-16.6.html" class="sidebar-link">React16.6</a></li><li><a href="/react/react-scheduler.html" class="sidebar-link">react scheduler</a></li><li><a href="/react/component.html" class="sidebar-link">React.Component</a></li><li><a href="/react/context.html" class="sidebar-link">Stack</a></li><li><a href="/react/diff-properties.html" class="sidebar-link">diffProperties</a></li><li><a href="/react/finalizeInitialChildren.html" class="sidebar-link">finalizeInitialChildren</a></li><li><a href="/react/hooks-common.html" class="sidebar-link">阅读源码后，来讲讲React Hokks是怎么实现的</a></li><li><a href="/react/hooks.html" class="sidebar-link">从源码看Hooks</a></li><li><a href="/react/complete-unit-of-work.html" aria-current="page" class="active sidebar-link">completeUnitOfWork</a></li><li><a href="/react/complete-work.html" class="sidebar-link">completeWork</a></li><li><a href="/react/pending-priority-methods.html" class="sidebar-link">markPendingPriorityLevel</a></li><li><a href="/react/pending-priority.html" class="sidebar-link">PendingPriority</a></li><li><a href="/react/stack-context.html" class="sidebar-link">Stack</a></li><li><a href="/react/start.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/suspense-core.html" class="sidebar-link">Suspense</a></li><li><a href="/react/suspense.html" class="sidebar-link">开启</a></li><li><a href="/react/time.html" class="sidebar-link">Time About</a></li><li><a href="/react/unwind-work.html" class="sidebar-link">unwindWork</a></li><li><a href="/react/update-queue.html" class="sidebar-link">updateQueue</a></li><li><a href="/react/why-new-context-api.html" class="sidebar-link">Context API</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="completeunitofwork"><a href="#completeunitofwork" class="header-anchor">#</a> completeUnitOfWork</h1> <p>对于是否具有<code>Incomplete</code>副作用的组件会采取不同的措施：</p> <ul><li>有：调用<code>unwindWork</code></li> <li>无：调用<code>completeWork</code></li></ul> <p><code>Incomplete</code>是在组件渲染过程中有错误被捕获的时候增加</p> <p>对于一个节点完成工作之后，需要重置父链上所有节点的<code>childExpirationTime</code>，调用<code>resetChildExpirationTime</code>。</p> <p>渲染完成之后要赋值父<code>Fiber</code>的<code>effect</code>链</p> <ul><li>先把他本身的<code>firstEffect -&gt; lastEffect</code>链放到父亲的<code>effect</code>链的最后</li> <li>如果节点自身也有<code>side effect</code>，那么把自己放在父亲的<code>effect</code>链的最后。</li></ul> <p>最后如果有兄弟节点，直接返回兄弟节点，因为要对其执行<code>update</code>。如果没有则返回父节点，因为父节点已经执行过更新，也可以<code>complete</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">completeUnitOfWork</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">workInProgress</span><span class="token operator">:</span> Fiber</span><span class="token punctuation">)</span><span class="token operator">:</span> Fiber <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> current <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>alternate
+
+    <span class="token keyword">const</span> returnFiber <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>return
+    <span class="token keyword">const</span> siblingFiber <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>sibling
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">.</span>effectTag <span class="token operator">&amp;</span> Incomplete<span class="token punctuation">)</span> <span class="token operator">===</span> NoEffect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// This fiber completed.</span>
+      nextUnitOfWork <span class="token operator">=</span> <span class="token function">completeWork</span><span class="token punctuation">(</span>
+        current<span class="token punctuation">,</span>
+        workInProgress<span class="token punctuation">,</span>
+        nextRenderExpirationTime<span class="token punctuation">,</span>
+      <span class="token punctuation">)</span>
+      <span class="token function">resetChildExpirationTime</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">,</span> nextRenderExpirationTime<span class="token punctuation">)</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>
+        returnFiber <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span>
+        <span class="token comment">// Do not append effects to parents if a sibling failed to complete</span>
+        <span class="token punctuation">(</span>returnFiber<span class="token punctuation">.</span>effectTag <span class="token operator">&amp;</span> Incomplete<span class="token punctuation">)</span> <span class="token operator">===</span> NoEffect
+      <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>returnFiber<span class="token punctuation">.</span>firstEffect <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          returnFiber<span class="token punctuation">.</span>firstEffect <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>firstEffect
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>workInProgress<span class="token punctuation">.</span>lastEffect <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>returnFiber<span class="token punctuation">.</span>lastEffect <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            returnFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">.</span>nextEffect <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>firstEffect
+          <span class="token punctuation">}</span>
+          returnFiber<span class="token punctuation">.</span>lastEffect <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>lastEffect
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">const</span> effectTag <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>effectTag
+        <span class="token comment">// Skip both NoWork and PerformedWork tags when creating the effect list.</span>
+        <span class="token comment">// PerformedWork effect is read by React DevTools but shouldn't be committed.</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>effectTag <span class="token operator">&gt;</span> PerformedWork<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>returnFiber<span class="token punctuation">.</span>lastEffect <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            returnFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">.</span>nextEffect <span class="token operator">=</span> workInProgress
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            returnFiber<span class="token punctuation">.</span>firstEffect <span class="token operator">=</span> workInProgress
+          <span class="token punctuation">}</span>
+          returnFiber<span class="token punctuation">.</span>lastEffect <span class="token operator">=</span> workInProgress
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>siblingFiber <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// If there is more work to do in this returnFiber, do that next.</span>
+        <span class="token keyword">return</span> siblingFiber
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>returnFiber <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// If there's no more work in this returnFiber. Complete the returnFiber.</span>
+        workInProgress <span class="token operator">=</span> returnFiber
+        <span class="token keyword">continue</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// We've reached the root.</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>workInProgress<span class="token punctuation">.</span>mode <span class="token operator">&amp;</span> ProfileMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Record the render duration for the fiber that errored.</span>
+        <span class="token function">stopProfilerTimerIfRunningAndRecordDelta</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">const</span> next <span class="token operator">=</span> <span class="token function">unwindWork</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">,</span> nextRenderExpirationTime<span class="token punctuation">)</span>
+      <span class="token comment">// Because this fiber did not complete, don't reset its expiration time.</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>workInProgress<span class="token punctuation">.</span>effectTag <span class="token operator">&amp;</span> DidCapture<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Restarting an error boundary</span>
+        <span class="token function">stopFailedWorkTimer</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">stopWorkTimer</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>next <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">stopWorkTimer</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">)</span>
+
+        <span class="token comment">// enableProfilerTimer...</span>
+
+        next<span class="token punctuation">.</span>effectTag <span class="token operator">&amp;=</span> HostEffectMask
+        <span class="token keyword">return</span> next
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>returnFiber <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Mark the parent fiber as incomplete and clear its effect list.</span>
+        returnFiber<span class="token punctuation">.</span>firstEffect <span class="token operator">=</span> returnFiber<span class="token punctuation">.</span>lastEffect <span class="token operator">=</span> <span class="token keyword">null</span>
+        returnFiber<span class="token punctuation">.</span>effectTag <span class="token operator">|=</span> Incomplete
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>__DEV__ <span class="token operator">&amp;&amp;</span> ReactFiberInstrumentation<span class="token punctuation">.</span>debugTool<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ReactFiberInstrumentation<span class="token punctuation">.</span>debugTool<span class="token punctuation">.</span><span class="token function">onCompleteWork</span><span class="token punctuation">(</span>workInProgress<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>siblingFiber <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// If there is more work to do in this returnFiber, do that next.</span>
+        <span class="token keyword">return</span> siblingFiber
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>returnFiber <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// If there's no more work in this returnFiber. Complete the returnFiber.</span>
+        workInProgress <span class="token operator">=</span> returnFiber
+        <span class="token keyword">continue</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h1 id="resetchildexpirationtime"><a href="#resetchildexpirationtime" class="header-anchor">#</a> resetChildExpirationTime</h1> <p>简单来说这里不仅要看当前节点的<code>child</code>的<code>expirationTime</code>，还需要看<code>child</code>的<code>childExpirationTime</code>，并且要从所有兄弟节点中找最小的那个。</p> <p>过程没啥好讲的，算法挺简单的。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">resetChildExpirationTime</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">workInProgress</span><span class="token operator">:</span> Fiber<span class="token punctuation">,</span>
+  <span class="token literal-property property">renderTime</span><span class="token operator">:</span> ExpirationTime<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>renderTime <span class="token operator">!==</span> Never <span class="token operator">&amp;&amp;</span> workInProgress<span class="token punctuation">.</span>childExpirationTime <span class="token operator">===</span> Never<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">let</span> newChildExpirationTime <span class="token operator">=</span> NoWork
+
+  <span class="token comment">// profiler 相关代码</span>
+
+  <span class="token keyword">let</span> child <span class="token operator">=</span> workInProgress<span class="token punctuation">.</span>child
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>child <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> childUpdateExpirationTime <span class="token operator">=</span> child<span class="token punctuation">.</span>expirationTime
+    <span class="token keyword">const</span> childChildExpirationTime <span class="token operator">=</span> child<span class="token punctuation">.</span>childExpirationTime
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      newChildExpirationTime <span class="token operator">===</span> NoWork <span class="token operator">||</span>
+      <span class="token punctuation">(</span>childUpdateExpirationTime <span class="token operator">!==</span> NoWork <span class="token operator">&amp;&amp;</span>
+        childUpdateExpirationTime <span class="token operator">&lt;</span> newChildExpirationTime<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newChildExpirationTime <span class="token operator">=</span> childUpdateExpirationTime
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      newChildExpirationTime <span class="token operator">===</span> NoWork <span class="token operator">||</span>
+      <span class="token punctuation">(</span>childChildExpirationTime <span class="token operator">!==</span> NoWork <span class="token operator">&amp;&amp;</span>
+        childChildExpirationTime <span class="token operator">&lt;</span> newChildExpirationTime<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newChildExpirationTime <span class="token operator">=</span> childChildExpirationTime
+    <span class="token punctuation">}</span>
+    child <span class="token operator">=</span> child<span class="token punctuation">.</span>sibling
+  <span class="token punctuation">}</span>
+
+  workInProgress<span class="token punctuation">.</span>childExpirationTime <span class="token operator">=</span> newChildExpirationTime
+<span class="token punctuation">}</span>
+</code></pre></div><p>接下去请看：</p> <ul><li><a href="/react/complete-work/complete-work.html"><code>completeWork</code></a></li> <li><a href="/react/complete-work/unwindWork.html"><code>unwindWork</code></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/hooks.html" class="prev">
+        从源码看Hooks
+      </a></span> <span class="next"><a href="/react/complete-work.html">
+        completeWork
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99b5bf8c.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/15.17b5a911.js" defer></script>
+  </body>
+</html>

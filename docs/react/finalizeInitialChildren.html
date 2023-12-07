@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>finalizeInitialChildren | 王亚宁的个人学习</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.99b5bf8c.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/20.4d1669ae.js" as="script"><link rel="prefetch" href="/assets/js/10.6d1d7980.js"><link rel="prefetch" href="/assets/js/11.25fb5d69.js"><link rel="prefetch" href="/assets/js/12.bc1ec79e.js"><link rel="prefetch" href="/assets/js/13.374735a3.js"><link rel="prefetch" href="/assets/js/14.d1314cfe.js"><link rel="prefetch" href="/assets/js/15.17b5a911.js"><link rel="prefetch" href="/assets/js/16.e0c10874.js"><link rel="prefetch" href="/assets/js/17.ac034782.js"><link rel="prefetch" href="/assets/js/18.ad32bacc.js"><link rel="prefetch" href="/assets/js/19.feb7eb65.js"><link rel="prefetch" href="/assets/js/21.58e133ab.js"><link rel="prefetch" href="/assets/js/22.4fda5adb.js"><link rel="prefetch" href="/assets/js/23.eca9f50e.js"><link rel="prefetch" href="/assets/js/24.e6e7dbdc.js"><link rel="prefetch" href="/assets/js/25.c9789b89.js"><link rel="prefetch" href="/assets/js/26.156cb2a0.js"><link rel="prefetch" href="/assets/js/27.eb596818.js"><link rel="prefetch" href="/assets/js/28.fa8f9629.js"><link rel="prefetch" href="/assets/js/29.2013f0a2.js"><link rel="prefetch" href="/assets/js/3.dca13282.js"><link rel="prefetch" href="/assets/js/30.88192890.js"><link rel="prefetch" href="/assets/js/31.b02f53c7.js"><link rel="prefetch" href="/assets/js/32.d9d2cc26.js"><link rel="prefetch" href="/assets/js/33.81844ad5.js"><link rel="prefetch" href="/assets/js/34.becf5ac9.js"><link rel="prefetch" href="/assets/js/35.e3e5a33b.js"><link rel="prefetch" href="/assets/js/36.215dbd6f.js"><link rel="prefetch" href="/assets/js/37.84c02384.js"><link rel="prefetch" href="/assets/js/38.a4c03307.js"><link rel="prefetch" href="/assets/js/39.3640528f.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.d07751f5.js"><link rel="prefetch" href="/assets/js/41.ca2fb91b.js"><link rel="prefetch" href="/assets/js/42.29bd46cc.js"><link rel="prefetch" href="/assets/js/43.078b0578.js"><link rel="prefetch" href="/assets/js/44.8bc1ef68.js"><link rel="prefetch" href="/assets/js/45.b63b3129.js"><link rel="prefetch" href="/assets/js/46.baf5c7c5.js"><link rel="prefetch" href="/assets/js/47.553e39ba.js"><link rel="prefetch" href="/assets/js/48.3b0f6b8f.js"><link rel="prefetch" href="/assets/js/49.0711a1e9.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.7717d267.js"><link rel="prefetch" href="/assets/js/6.820ab661.js"><link rel="prefetch" href="/assets/js/7.7f0c0f6a.js"><link rel="prefetch" href="/assets/js/8.8733fc27.js"><link rel="prefetch" href="/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王亚宁的个人学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>react源码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/react.html" class="sidebar-link">React</a></li><li><a href="/react/ref.html" class="sidebar-link">createRef</a></li><li><a href="/react/scheduler.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/react-16.6.html" class="sidebar-link">React16.6</a></li><li><a href="/react/react-scheduler.html" class="sidebar-link">react scheduler</a></li><li><a href="/react/component.html" class="sidebar-link">React.Component</a></li><li><a href="/react/context.html" class="sidebar-link">Stack</a></li><li><a href="/react/diff-properties.html" class="sidebar-link">diffProperties</a></li><li><a href="/react/finalizeInitialChildren.html" aria-current="page" class="active sidebar-link">finalizeInitialChildren</a></li><li><a href="/react/hooks-common.html" class="sidebar-link">阅读源码后，来讲讲React Hokks是怎么实现的</a></li><li><a href="/react/hooks.html" class="sidebar-link">从源码看Hooks</a></li><li><a href="/react/complete-unit-of-work.html" class="sidebar-link">completeUnitOfWork</a></li><li><a href="/react/complete-work.html" class="sidebar-link">completeWork</a></li><li><a href="/react/pending-priority-methods.html" class="sidebar-link">markPendingPriorityLevel</a></li><li><a href="/react/pending-priority.html" class="sidebar-link">PendingPriority</a></li><li><a href="/react/stack-context.html" class="sidebar-link">Stack</a></li><li><a href="/react/start.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/suspense-core.html" class="sidebar-link">Suspense</a></li><li><a href="/react/suspense.html" class="sidebar-link">开启</a></li><li><a href="/react/time.html" class="sidebar-link">Time About</a></li><li><a href="/react/unwind-work.html" class="sidebar-link">unwindWork</a></li><li><a href="/react/update-queue.html" class="sidebar-link">updateQueue</a></li><li><a href="/react/why-new-context-api.html" class="sidebar-link">Context API</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="finalizeinitialchildren"><a href="#finalizeinitialchildren" class="header-anchor">#</a> finalizeInitialChildren</h1> <p>这里其实主要是事件绑定然后对于<code>form</code>组件：</p> <ul><li><code>input</code></li> <li><code>option</code></li> <li><code>select</code></li> <li><code>textarea</code></li></ul> <p>设置初始<code>wrapper</code></p> <p>事件绑定放到<a href=""><code>event</code></a>里面讲解。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">finalizeInitialChildren</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">domElement</span><span class="token operator">:</span> Instance<span class="token punctuation">,</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> string<span class="token punctuation">,</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span> Props<span class="token punctuation">,</span>
+  <span class="token literal-property property">rootContainerInstance</span><span class="token operator">:</span> Container<span class="token punctuation">,</span>
+  <span class="token literal-property property">hostContext</span><span class="token operator">:</span> HostContext<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span><span class="token operator">:</span> boolean <span class="token punctuation">{</span>
+  <span class="token function">setInitialProperties</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> type<span class="token punctuation">,</span> props<span class="token punctuation">,</span> rootContainerInstance<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token function">shouldAutoFocusHostComponent</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> props<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">setInitialProperties</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">domElement</span><span class="token operator">:</span> Element<span class="token punctuation">,</span>
+  <span class="token literal-property property">tag</span><span class="token operator">:</span> string<span class="token punctuation">,</span>
+  <span class="token literal-property property">rawProps</span><span class="token operator">:</span> Object<span class="token punctuation">,</span>
+  <span class="token literal-property property">rootContainerElement</span><span class="token operator">:</span> Element <span class="token operator">|</span> Document<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> isCustomComponentTag <span class="token operator">=</span> <span class="token function">isCustomComponent</span><span class="token punctuation">(</span>tag<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+
+  <span class="token comment">// TODO: Make sure that we check isMounted before firing any of these events.</span>
+  <span class="token keyword">let</span> <span class="token literal-property property">props</span><span class="token operator">:</span> Object
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>tag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">'iframe'</span><span class="token operator">:</span>
+    <span class="token keyword">case</span> <span class="token string">'object'</span><span class="token operator">:</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_LOAD</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> rawProps
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'video'</span><span class="token operator">:</span>
+    <span class="token keyword">case</span> <span class="token string">'audio'</span><span class="token operator">:</span>
+      <span class="token comment">// Create listener for each media event</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> mediaEventTypes<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span>mediaEventTypes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      props <span class="token operator">=</span> rawProps
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'source'</span><span class="token operator">:</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_ERROR</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> rawProps
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'img'</span><span class="token operator">:</span>
+    <span class="token keyword">case</span> <span class="token string">'image'</span><span class="token operator">:</span>
+    <span class="token keyword">case</span> <span class="token string">'link'</span><span class="token operator">:</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_ERROR</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_LOAD</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> rawProps
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'form'</span><span class="token operator">:</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_RESET</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_SUBMIT</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> rawProps
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'details'</span><span class="token operator">:</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_TOGGLE</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> rawProps
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'input'</span><span class="token operator">:</span>
+      ReactDOMInput<span class="token punctuation">.</span><span class="token function">initWrapperState</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> ReactDOMInput<span class="token punctuation">.</span><span class="token function">getHostProps</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_INVALID</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      <span class="token comment">// For controlled components we always need to ensure we're listening</span>
+      <span class="token comment">// to onChange. Even if there is no listener.</span>
+      <span class="token function">ensureListeningTo</span><span class="token punctuation">(</span>rootContainerElement<span class="token punctuation">,</span> <span class="token string">'onChange'</span><span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'option'</span><span class="token operator">:</span>
+      ReactDOMOption<span class="token punctuation">.</span><span class="token function">validateProps</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> ReactDOMOption<span class="token punctuation">.</span><span class="token function">getHostProps</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'select'</span><span class="token operator">:</span>
+      ReactDOMSelect<span class="token punctuation">.</span><span class="token function">initWrapperState</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> ReactDOMSelect<span class="token punctuation">.</span><span class="token function">getHostProps</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_INVALID</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      <span class="token comment">// For controlled components we always need to ensure we're listening</span>
+      <span class="token comment">// to onChange. Even if there is no listener.</span>
+      <span class="token function">ensureListeningTo</span><span class="token punctuation">(</span>rootContainerElement<span class="token punctuation">,</span> <span class="token string">'onChange'</span><span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'textarea'</span><span class="token operator">:</span>
+      ReactDOMTextarea<span class="token punctuation">.</span><span class="token function">initWrapperState</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      props <span class="token operator">=</span> ReactDOMTextarea<span class="token punctuation">.</span><span class="token function">getHostProps</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      <span class="token function">trapBubbledEvent</span><span class="token punctuation">(</span><span class="token constant">TOP_INVALID</span><span class="token punctuation">,</span> domElement<span class="token punctuation">)</span>
+      <span class="token comment">// For controlled components we always need to ensure we're listening</span>
+      <span class="token comment">// to onChange. Even if there is no listener.</span>
+      <span class="token function">ensureListeningTo</span><span class="token punctuation">(</span>rootContainerElement<span class="token punctuation">,</span> <span class="token string">'onChange'</span><span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+      props <span class="token operator">=</span> rawProps
+  <span class="token punctuation">}</span>
+
+  <span class="token function">assertValidProps</span><span class="token punctuation">(</span>tag<span class="token punctuation">,</span> props<span class="token punctuation">)</span>
+
+  <span class="token function">setInitialDOMProperties</span><span class="token punctuation">(</span>
+    tag<span class="token punctuation">,</span>
+    domElement<span class="token punctuation">,</span>
+    rootContainerElement<span class="token punctuation">,</span>
+    props<span class="token punctuation">,</span>
+    isCustomComponentTag<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span>
+
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>tag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">'input'</span><span class="token operator">:</span>
+      <span class="token comment">// TODO: Make sure we check if this is still unmounted or do any clean</span>
+      <span class="token comment">// up necessary since we never stop tracking anymore.</span>
+      inputValueTracking<span class="token punctuation">.</span><span class="token function">track</span><span class="token punctuation">(</span><span class="token punctuation">(</span>domElement<span class="token operator">:</span> any<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      ReactDOMInput<span class="token punctuation">.</span><span class="token function">postMountWrapper</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'textarea'</span><span class="token operator">:</span>
+      <span class="token comment">// TODO: Make sure we check if this is still unmounted or do any clean</span>
+      <span class="token comment">// up necessary since we never stop tracking anymore.</span>
+      inputValueTracking<span class="token punctuation">.</span><span class="token function">track</span><span class="token punctuation">(</span><span class="token punctuation">(</span>domElement<span class="token operator">:</span> any<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      ReactDOMTextarea<span class="token punctuation">.</span><span class="token function">postMountWrapper</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'option'</span><span class="token operator">:</span>
+      ReactDOMOption<span class="token punctuation">.</span><span class="token function">postMountWrapper</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">case</span> <span class="token string">'select'</span><span class="token operator">:</span>
+      ReactDOMSelect<span class="token punctuation">.</span><span class="token function">postMountWrapper</span><span class="token punctuation">(</span>domElement<span class="token punctuation">,</span> rawProps<span class="token punctuation">)</span>
+      <span class="token keyword">break</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> props<span class="token punctuation">.</span>onClick <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// TODO: This cast may not be sound for SVG, MathML or custom elements.</span>
+        <span class="token function">trapClickOnNonInteractiveElement</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>domElement<span class="token operator">:</span> any<span class="token punctuation">)</span><span class="token operator">:</span> HTMLElement<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">break</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/diff-properties.html" class="prev">
+        diffProperties
+      </a></span> <span class="next"><a href="/react/hooks-common.html">
+        阅读源码后，来讲讲React Hokks是怎么实现的
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99b5bf8c.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/20.4d1669ae.js" defer></script>
+  </body>
+</html>

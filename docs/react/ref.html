@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>createRef | 王亚宁的个人学习</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.99b5bf8c.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/29.2013f0a2.js" as="script"><link rel="prefetch" href="/assets/js/10.6d1d7980.js"><link rel="prefetch" href="/assets/js/11.25fb5d69.js"><link rel="prefetch" href="/assets/js/12.bc1ec79e.js"><link rel="prefetch" href="/assets/js/13.374735a3.js"><link rel="prefetch" href="/assets/js/14.d1314cfe.js"><link rel="prefetch" href="/assets/js/15.17b5a911.js"><link rel="prefetch" href="/assets/js/16.e0c10874.js"><link rel="prefetch" href="/assets/js/17.ac034782.js"><link rel="prefetch" href="/assets/js/18.ad32bacc.js"><link rel="prefetch" href="/assets/js/19.feb7eb65.js"><link rel="prefetch" href="/assets/js/20.4d1669ae.js"><link rel="prefetch" href="/assets/js/21.58e133ab.js"><link rel="prefetch" href="/assets/js/22.4fda5adb.js"><link rel="prefetch" href="/assets/js/23.eca9f50e.js"><link rel="prefetch" href="/assets/js/24.e6e7dbdc.js"><link rel="prefetch" href="/assets/js/25.c9789b89.js"><link rel="prefetch" href="/assets/js/26.156cb2a0.js"><link rel="prefetch" href="/assets/js/27.eb596818.js"><link rel="prefetch" href="/assets/js/28.fa8f9629.js"><link rel="prefetch" href="/assets/js/3.dca13282.js"><link rel="prefetch" href="/assets/js/30.88192890.js"><link rel="prefetch" href="/assets/js/31.b02f53c7.js"><link rel="prefetch" href="/assets/js/32.d9d2cc26.js"><link rel="prefetch" href="/assets/js/33.81844ad5.js"><link rel="prefetch" href="/assets/js/34.becf5ac9.js"><link rel="prefetch" href="/assets/js/35.e3e5a33b.js"><link rel="prefetch" href="/assets/js/36.215dbd6f.js"><link rel="prefetch" href="/assets/js/37.84c02384.js"><link rel="prefetch" href="/assets/js/38.a4c03307.js"><link rel="prefetch" href="/assets/js/39.3640528f.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.d07751f5.js"><link rel="prefetch" href="/assets/js/41.ca2fb91b.js"><link rel="prefetch" href="/assets/js/42.29bd46cc.js"><link rel="prefetch" href="/assets/js/43.078b0578.js"><link rel="prefetch" href="/assets/js/44.8bc1ef68.js"><link rel="prefetch" href="/assets/js/45.b63b3129.js"><link rel="prefetch" href="/assets/js/46.baf5c7c5.js"><link rel="prefetch" href="/assets/js/47.553e39ba.js"><link rel="prefetch" href="/assets/js/48.3b0f6b8f.js"><link rel="prefetch" href="/assets/js/49.0711a1e9.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.7717d267.js"><link rel="prefetch" href="/assets/js/6.820ab661.js"><link rel="prefetch" href="/assets/js/7.7f0c0f6a.js"><link rel="prefetch" href="/assets/js/8.8733fc27.js"><link rel="prefetch" href="/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王亚宁的个人学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>react源码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/react.html" class="sidebar-link">React</a></li><li><a href="/react/ref.html" aria-current="page" class="active sidebar-link">createRef</a></li><li><a href="/react/scheduler.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/react-16.6.html" class="sidebar-link">React16.6</a></li><li><a href="/react/react-scheduler.html" class="sidebar-link">react scheduler</a></li><li><a href="/react/component.html" class="sidebar-link">React.Component</a></li><li><a href="/react/context.html" class="sidebar-link">Stack</a></li><li><a href="/react/diff-properties.html" class="sidebar-link">diffProperties</a></li><li><a href="/react/finalizeInitialChildren.html" class="sidebar-link">finalizeInitialChildren</a></li><li><a href="/react/hooks-common.html" class="sidebar-link">阅读源码后，来讲讲React Hokks是怎么实现的</a></li><li><a href="/react/hooks.html" class="sidebar-link">从源码看Hooks</a></li><li><a href="/react/complete-unit-of-work.html" class="sidebar-link">completeUnitOfWork</a></li><li><a href="/react/complete-work.html" class="sidebar-link">completeWork</a></li><li><a href="/react/pending-priority-methods.html" class="sidebar-link">markPendingPriorityLevel</a></li><li><a href="/react/pending-priority.html" class="sidebar-link">PendingPriority</a></li><li><a href="/react/stack-context.html" class="sidebar-link">Stack</a></li><li><a href="/react/start.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/suspense-core.html" class="sidebar-link">Suspense</a></li><li><a href="/react/suspense.html" class="sidebar-link">开启</a></li><li><a href="/react/time.html" class="sidebar-link">Time About</a></li><li><a href="/react/unwind-work.html" class="sidebar-link">unwindWork</a></li><li><a href="/react/update-queue.html" class="sidebar-link">updateQueue</a></li><li><a href="/react/why-new-context-api.html" class="sidebar-link">Context API</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="createref"><a href="#createref" class="header-anchor">#</a> createRef</h1> <p>是的就是返回一个<code>{ current: null }</code>的对象，最终<code>current</code>被赋值要等到后面渲染组件的时候，后面会有专门的章节来讲具体逻辑</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> RefObject <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> refObject <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">current</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>__DEV__<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Object<span class="token punctuation">.</span><span class="token function">seal</span><span class="token punctuation">(</span>refObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> refObject<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h1 id="forwardref"><a href="#forwardref" class="header-anchor">#</a> forwardRef</h1> <p><code>forwardRef</code>主要配合<code>HOC</code>使用，他接收<code>FunctionalComponent</code>作为参数，因为<code>FunctionalComponent</code>没有实例，所以在他上面使用<code>ref</code>没有什么意义，二<code>ref</code>本身不是<code>props</code>，无法在<code>FunctionalComponent</code>中获取到再赋值给他的子节点。</p> <p><code>forwardRef</code>让<code>FunctionalComponent</code>可以接收第二个参数<code>function FunComp(props, ref) {}</code>，第二个参数就是他的父辈组件作用在他上面的<code>ref</code>，他可以获取到并且当作变量传递给他的子孙节点。</p> <p><code>forwardRef</code>的代码也是异常简单，</p> <p>可以看到他返回的是一个对象，里面有一个比较特殊的变量<code>$$typeof</code>，他的值是一个常量，用来表明这个个节点的类型是<code>forwardRef</code>，而我们传入的<code>FunctionalComponent</code>则是返回对象的另外一个属性，<em>在后期讲组件更新的时候，我们会再详细讲对于<code>forwardRef</code>更新</em></p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> forwardRef<span class="token operator">&lt;</span>Props<span class="token punctuation">,</span> <span class="token literal-property property">ElementType</span><span class="token operator">:</span> React$ElementType<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+  <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">props</span><span class="token operator">:</span> Props<span class="token punctuation">,</span> <span class="token literal-property property">ref</span><span class="token operator">:</span> React$Ref<span class="token operator">&lt;</span>ElementType<span class="token operator">&gt;</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> React$Node<span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+  <span class="token comment">// some dev code</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    $$<span class="token keyword">typeof</span><span class="token operator">:</span> <span class="token constant">REACT_FORWARD_REF_TYPE</span><span class="token punctuation">,</span>
+    render<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/react.html" class="prev">
+        React
+      </a></span> <span class="next"><a href="/react/scheduler.html">
+        React是如何调度任务的
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99b5bf8c.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/29.2013f0a2.js" defer></script>
+  </body>
+</html>

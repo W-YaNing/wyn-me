@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>react scheduler | 王亚宁的个人学习</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.99b5bf8c.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/27.eb596818.js" as="script"><link rel="prefetch" href="/assets/js/10.6d1d7980.js"><link rel="prefetch" href="/assets/js/11.25fb5d69.js"><link rel="prefetch" href="/assets/js/12.bc1ec79e.js"><link rel="prefetch" href="/assets/js/13.374735a3.js"><link rel="prefetch" href="/assets/js/14.d1314cfe.js"><link rel="prefetch" href="/assets/js/15.17b5a911.js"><link rel="prefetch" href="/assets/js/16.e0c10874.js"><link rel="prefetch" href="/assets/js/17.ac034782.js"><link rel="prefetch" href="/assets/js/18.ad32bacc.js"><link rel="prefetch" href="/assets/js/19.feb7eb65.js"><link rel="prefetch" href="/assets/js/20.4d1669ae.js"><link rel="prefetch" href="/assets/js/21.58e133ab.js"><link rel="prefetch" href="/assets/js/22.4fda5adb.js"><link rel="prefetch" href="/assets/js/23.eca9f50e.js"><link rel="prefetch" href="/assets/js/24.e6e7dbdc.js"><link rel="prefetch" href="/assets/js/25.c9789b89.js"><link rel="prefetch" href="/assets/js/26.156cb2a0.js"><link rel="prefetch" href="/assets/js/28.fa8f9629.js"><link rel="prefetch" href="/assets/js/29.2013f0a2.js"><link rel="prefetch" href="/assets/js/3.dca13282.js"><link rel="prefetch" href="/assets/js/30.88192890.js"><link rel="prefetch" href="/assets/js/31.b02f53c7.js"><link rel="prefetch" href="/assets/js/32.d9d2cc26.js"><link rel="prefetch" href="/assets/js/33.81844ad5.js"><link rel="prefetch" href="/assets/js/34.becf5ac9.js"><link rel="prefetch" href="/assets/js/35.e3e5a33b.js"><link rel="prefetch" href="/assets/js/36.215dbd6f.js"><link rel="prefetch" href="/assets/js/37.84c02384.js"><link rel="prefetch" href="/assets/js/38.a4c03307.js"><link rel="prefetch" href="/assets/js/39.3640528f.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.d07751f5.js"><link rel="prefetch" href="/assets/js/41.ca2fb91b.js"><link rel="prefetch" href="/assets/js/42.29bd46cc.js"><link rel="prefetch" href="/assets/js/43.078b0578.js"><link rel="prefetch" href="/assets/js/44.8bc1ef68.js"><link rel="prefetch" href="/assets/js/45.b63b3129.js"><link rel="prefetch" href="/assets/js/46.baf5c7c5.js"><link rel="prefetch" href="/assets/js/47.553e39ba.js"><link rel="prefetch" href="/assets/js/48.3b0f6b8f.js"><link rel="prefetch" href="/assets/js/49.0711a1e9.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.7717d267.js"><link rel="prefetch" href="/assets/js/6.820ab661.js"><link rel="prefetch" href="/assets/js/7.7f0c0f6a.js"><link rel="prefetch" href="/assets/js/8.8733fc27.js"><link rel="prefetch" href="/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王亚宁的个人学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>react源码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/react.html" class="sidebar-link">React</a></li><li><a href="/react/ref.html" class="sidebar-link">createRef</a></li><li><a href="/react/scheduler.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/react-16.6.html" class="sidebar-link">React16.6</a></li><li><a href="/react/react-scheduler.html" aria-current="page" class="active sidebar-link">react scheduler</a></li><li><a href="/react/component.html" class="sidebar-link">React.Component</a></li><li><a href="/react/context.html" class="sidebar-link">Stack</a></li><li><a href="/react/diff-properties.html" class="sidebar-link">diffProperties</a></li><li><a href="/react/finalizeInitialChildren.html" class="sidebar-link">finalizeInitialChildren</a></li><li><a href="/react/hooks-common.html" class="sidebar-link">阅读源码后，来讲讲React Hokks是怎么实现的</a></li><li><a href="/react/hooks.html" class="sidebar-link">从源码看Hooks</a></li><li><a href="/react/complete-unit-of-work.html" class="sidebar-link">completeUnitOfWork</a></li><li><a href="/react/complete-work.html" class="sidebar-link">completeWork</a></li><li><a href="/react/pending-priority-methods.html" class="sidebar-link">markPendingPriorityLevel</a></li><li><a href="/react/pending-priority.html" class="sidebar-link">PendingPriority</a></li><li><a href="/react/stack-context.html" class="sidebar-link">Stack</a></li><li><a href="/react/start.html" class="sidebar-link">React是如何调度任务的</a></li><li><a href="/react/suspense-core.html" class="sidebar-link">Suspense</a></li><li><a href="/react/suspense.html" class="sidebar-link">开启</a></li><li><a href="/react/time.html" class="sidebar-link">Time About</a></li><li><a href="/react/unwind-work.html" class="sidebar-link">unwindWork</a></li><li><a href="/react/update-queue.html" class="sidebar-link">updateQueue</a></li><li><a href="/react/why-new-context-api.html" class="sidebar-link">Context API</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-scheduler"><a href="#react-scheduler" class="header-anchor">#</a> react scheduler</h1> <p><code>react-scheduler/src/ReactScheduler.js</code>里面包含了主要的React调度相关的代码，通过控制每一帧中间的时间来让浏览器有足够的空闲事件进行渲染工作，这里让我们分析一下里面的代码。</p> <h1 id="schedulework"><a href="#schedulework" class="header-anchor">#</a> scheduleWork</h1> <p>这个方法接受两个参数</p> <ol><li>callback就是需要调度的任务</li> <li>options通过flow的类型可以看出是一个只有timeout参数的对象，这个timeout是指多久没执行这个callback就代表已经超时了，需要尽快执行</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> timeoutTime <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>options <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> options<span class="token punctuation">.</span>timeout <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  timeoutTime <span class="token operator">=</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> options<span class="token punctuation">.</span>timeout<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>
+  nextSoonestTimeoutTime <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span>
+  <span class="token punctuation">(</span>timeoutTime <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> timeoutTime <span class="token operator">&lt;</span> nextSoonestTimeoutTime<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  nextSoonestTimeoutTime <span class="token operator">=</span> timeoutTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这边就是初始化一些变量，传入的<code>timeout</code>只是一个时间长度，这边要换算成具体的事件点。<code>nextSoonestTimeoutTime</code>是这里的一个全局变量，如果新的任务的超时事件比目前最近的还要小，那么设置当前的为最小时间</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token literal-property property">scheduledCallbackConfig</span><span class="token operator">:</span> CallbackConfigType <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">scheduledCallback</span><span class="token operator">:</span> callback<span class="token punctuation">,</span>
+  timeoutTime<span class="token punctuation">,</span>
+  <span class="token literal-property property">prev</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">next</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>创建<code>callbackConfig</code>对象，可以认为他就是在<strong>Fiber调度</strong>时的<code>deadline</code>，在<code>ReactFiberScheduler</code>中的<code>shouldYield</code>方法中会用他来判断任务执行是否超时，需要暂停</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>headOfPendingCallbacksLinkedList <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Make this callback the head and tail of our list</span>
+  headOfPendingCallbacksLinkedList <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+  tailOfPendingCallbacksLinkedList <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Add latest callback as the new tail of the list</span>
+  scheduledCallbackConfig<span class="token punctuation">.</span>prev <span class="token operator">=</span> tailOfPendingCallbacksLinkedList<span class="token punctuation">;</span>
+  <span class="token comment">// renaming for clarity</span>
+  <span class="token keyword">const</span> oldTailOfPendingCallbacksLinkedList <span class="token operator">=</span> tailOfPendingCallbacksLinkedList<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>oldTailOfPendingCallbacksLinkedList <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    oldTailOfPendingCallbacksLinkedList<span class="token punctuation">.</span>next <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  tailOfPendingCallbacksLinkedList <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>headOfPendingCallbacksLinkedList</code>和<code>tailOfPendingCallbacksLinkedList</code>又是一个链表结构，每一个节点包含<code>prev</code>和<code>next</code>迎来链接上一个任务和下一个任务，在这里就是执行把当前任务插入链表的操作</p> <p>最后判断<code>isAnimationFrameScheduled</code>是否为<code>false</code>，如果是则主动调用他，如果不是说明已经在操作<code>CallbacksLinkedList</code>，那么我们已经插入了任务，自然而然会执行到。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function-variable function">scheduleWork</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">callback</span><span class="token operator">:</span> FrameCallbackType<span class="token punctuation">,</span>
+  options<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token literal-property property">timeout</span><span class="token operator">:</span> number<span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span><span class="token operator">:</span> CallbackIdType <span class="token comment">/* CallbackConfigType */</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timeoutTime <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>options <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> options<span class="token punctuation">.</span>timeout <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    timeoutTime <span class="token operator">=</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> options<span class="token punctuation">.</span>timeout<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    nextSoonestTimeoutTime <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span>
+    <span class="token punctuation">(</span>timeoutTime <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> timeoutTime <span class="token operator">&lt;</span> nextSoonestTimeoutTime<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    nextSoonestTimeoutTime <span class="token operator">=</span> timeoutTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> <span class="token literal-property property">scheduledCallbackConfig</span><span class="token operator">:</span> CallbackConfigType <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">scheduledCallback</span><span class="token operator">:</span> callback<span class="token punctuation">,</span>
+    timeoutTime<span class="token punctuation">,</span>
+    <span class="token literal-property property">prev</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">next</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>headOfPendingCallbacksLinkedList <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Make this callback the head and tail of our list</span>
+    headOfPendingCallbacksLinkedList <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+    tailOfPendingCallbacksLinkedList <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Add latest callback as the new tail of the list</span>
+    scheduledCallbackConfig<span class="token punctuation">.</span>prev <span class="token operator">=</span> tailOfPendingCallbacksLinkedList<span class="token punctuation">;</span>
+    <span class="token comment">// renaming for clarity</span>
+    <span class="token keyword">const</span> oldTailOfPendingCallbacksLinkedList <span class="token operator">=</span> tailOfPendingCallbacksLinkedList<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>oldTailOfPendingCallbacksLinkedList <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      oldTailOfPendingCallbacksLinkedList<span class="token punctuation">.</span>next <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    tailOfPendingCallbacksLinkedList <span class="token operator">=</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isAnimationFrameScheduled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// If rAF didn't already schedule one, we need to schedule a frame.</span>
+    <span class="token comment">// TODO: If this rAF doesn't materialize because the browser throttles, we</span>
+    <span class="token comment">// might want to still have setTimeout trigger scheduleWork as a backup to ensure</span>
+    <span class="token comment">// that we keep performing work.</span>
+    isAnimationFrameScheduled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token function">localRequestAnimationFrame</span><span class="token punctuation">(</span>animationTick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> scheduledCallbackConfig<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="animationtick"><a href="#animationtick" class="header-anchor">#</a> animationTick</h1> <p><code>localRequestAnimationFrame</code>就是<code>requestAnimationFrame</code></p> <p><code>localRequestAnimationFrame(animationTick)</code>就意味着尽快调用<code>animationTick</code></p> <p><code>rafTime</code>是<code>requestAnimationFram</code>传递过来的，值是<code>performance.now()</code></p> <p>这边有几个全局变量：</p> <ol><li>frameDeadline 一帧最晚完成的时间</li> <li>activeFrameTime 每一帧可用的时间</li> <li>previousFrameTime 上一帧最晚完成时间</li></ol> <p>这边做的最主要的一个事情是动态得调整<code>activeFrameTime</code>的值，也就是在保持最低30帧的情况下，可以提高帧数。<code>activeFrameTime</code>初始是<code>33</code>也就是一秒30帧对应的每帧的时间。</p> <p>试想如果我们连续间隔小于<code>33ms</code>的时间调用<code>animationTick</code>，那么<code>rafTime - frameDeadline + activeFrameTime</code>肯定是小于<code>activeFrameTime</code>的，因为<code>frameDeadline = rafTime（上一个） + activeFrameTime</code>，也就是当前的<code>rafTime</code>如果正好是上次<code>33ms</code>之后调用的，那么<code>nextFrameTime</code>正好等于<code>activeFrameTime</code>。</p> <p><code>previousFrameTime</code>存在的意义是要保证连续两次出现<code>nextFrameTime</code>小于当前<code>activeFrameTime</code>才会调低每帧时间，而不会因为一些意外情况就随意调整</p> <p>可见的是动态调低的条件是很苛刻的，要连续两次，对于一般的应用来说，并不会太密集的运算和动画出现，可能都很少会出现连续调用<code>scheduleWork</code>的情况</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isIdleScheduled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  isIdleScheduled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  window<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span>messageKey<span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最后这里要调用<code>idelTick</code>，不清楚为什么要用<code>postMessage</code>来触发，看注释是因为要等当前的<code>repaint</code>结束之后才调用？<code>postMessage</code>属于<code>task</code></p> <p>TODO: 为啥要用<code>postMessage</code>触发<code>idelTick</code>，<code>postMessage</code>的执行时机</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">animationTick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">rafTime</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  isAnimationFrameScheduled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> nextFrameTime <span class="token operator">=</span> rafTime <span class="token operator">-</span> frameDeadline <span class="token operator">+</span> activeFrameTime<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    nextFrameTime <span class="token operator">&lt;</span> activeFrameTime <span class="token operator">&amp;&amp;</span>
+    previousFrameTime <span class="token operator">&lt;</span> activeFrameTime
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nextFrameTime <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Defensive coding. We don't support higher frame rates than 120hz.</span>
+      <span class="token comment">// If we get lower than that, it is probably a bug.</span>
+      nextFrameTime <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    activeFrameTime <span class="token operator">=</span>
+      nextFrameTime <span class="token operator">&lt;</span> previousFrameTime <span class="token operator">?</span> previousFrameTime <span class="token operator">:</span> nextFrameTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    previousFrameTime <span class="token operator">=</span> nextFrameTime<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  frameDeadline <span class="token operator">=</span> rafTime <span class="token operator">+</span> activeFrameTime<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isIdleScheduled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    isIdleScheduled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    window<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span>messageKey<span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="ideltick"><a href="#ideltick" class="header-anchor">#</a> IdelTick</h1> <p>首先执行<code>callTimedOutCallbacks</code>，把已经处于超时状态的任务先执行了。</p> <p>然后进入循环，依次执行<code>callbackLinkedList</code>中的每一项，并且保持在最晚时间之内</p> <p>清空队列或者到<code>deadline</code>之后，再次判断是否还有任务剩余，如果有，再次进入<code>animationTick</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// We use the postMessage trick to defer idle work until after the repaint.</span>
+<span class="token keyword">const</span> messageKey <span class="token operator">=</span>
+  <span class="token string">'__reactIdleCallback$'</span> <span class="token operator">+</span>
+  Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">36</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">idleTick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>source <span class="token operator">!==</span> window <span class="token operator">||</span> event<span class="token punctuation">.</span>data <span class="token operator">!==</span> messageKey<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  isIdleScheduled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>headOfPendingCallbacksLinkedList <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// First call anything which has timed out, until we have caught up.</span>
+  <span class="token function">callTimedOutCallbacks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> currentTime <span class="token operator">=</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// Next, as long as we have idle time, try calling more callbacks.</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>
+    frameDeadline <span class="token operator">-</span> currentTime <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span>
+    headOfPendingCallbacksLinkedList <span class="token operator">!==</span> <span class="token keyword">null</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> latestCallbackConfig <span class="token operator">=</span> headOfPendingCallbacksLinkedList<span class="token punctuation">;</span>
+    frameDeadlineObject<span class="token punctuation">.</span>didTimeout <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token comment">// callUnsafely will remove it from the head of the linked list</span>
+    <span class="token function">callUnsafely</span><span class="token punctuation">(</span>latestCallbackConfig<span class="token punctuation">,</span> frameDeadlineObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    currentTime <span class="token operator">=</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>headOfPendingCallbacksLinkedList <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isAnimationFrameScheduled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Schedule another animation callback so we retry later.</span>
+      isAnimationFrameScheduled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token function">localRequestAnimationFrame</span><span class="token punctuation">(</span>animationTick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// Assumes that we have addEventListener in this environment. Might need</span>
+<span class="token comment">// something better for old IE.</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> idleTick<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="calltimedoutcallbacks"><a href="#calltimedoutcallbacks" class="header-anchor">#</a> callTimedOutCallbacks</h1> <p>这个没啥好说的，就是一次判断链表每一项，如果<code>timeoutTime &lt;= currentTime</code>就加入到<code>timeOutCallbacks</code>数组中，然后一次调用他们。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">callTimedOutCallbacks</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>headOfPendingCallbacksLinkedList <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> currentTime <span class="token operator">=</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nextSoonestTimeoutTime <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span> nextSoonestTimeoutTime <span class="token operator">&gt;</span> currentTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// We know that none of them have timed out yet.</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">let</span> updatedNextSoonestTimeoutTime <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// we will update nextSoonestTimeoutTime below</span>
+  <span class="token keyword">const</span> timedOutCallbacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// iterate once to find timed out callbacks and find nextSoonestTimeoutTime</span>
+  <span class="token keyword">let</span> currentCallbackConfig <span class="token operator">=</span> headOfPendingCallbacksLinkedList<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>currentCallbackConfig <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> timeoutTime <span class="token operator">=</span> currentCallbackConfig<span class="token punctuation">.</span>timeoutTime<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>timeoutTime <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> timeoutTime <span class="token operator">&lt;=</span> currentTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// it has timed out!</span>
+      timedOutCallbacks<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>currentCallbackConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>
+        timeoutTime <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span>
+        <span class="token punctuation">(</span>updatedNextSoonestTimeoutTime <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span>
+          timeoutTime <span class="token operator">&lt;</span> updatedNextSoonestTimeoutTime<span class="token punctuation">)</span>
+      <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        updatedNextSoonestTimeoutTime <span class="token operator">=</span> timeoutTime<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    currentCallbackConfig <span class="token operator">=</span> currentCallbackConfig<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>timedOutCallbacks<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    frameDeadlineObject<span class="token punctuation">.</span>didTimeout <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> timedOutCallbacks<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">callUnsafely</span><span class="token punctuation">(</span>timedOutCallbacks<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> frameDeadlineObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// NOTE: we intentionally wait to update the nextSoonestTimeoutTime until</span>
+  <span class="token comment">// after successfully calling any timed out callbacks.</span>
+  nextSoonestTimeoutTime <span class="token operator">=</span> updatedNextSoonestTimeoutTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="callunsafely"><a href="#callunsafely" class="header-anchor">#</a> callUnsafely</h1> <p><code>arg</code>就是<code>frameDeadlineObject</code>也就是<code>deadline</code>，结构如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token literal-property property">frameDeadlineObject</span><span class="token operator">:</span> Deadline <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">didTimeout</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token function">timeRemaining</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> remaining <span class="token operator">=</span> frameDeadline <span class="token operator">-</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> remaining <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> remaining <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>不论最终是否有<code>catch</code>到错误，都会取消当前任务，并且如果没有正常结束，则会再次进入<code>idelTick</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">callUnsafely</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">callbackConfig</span><span class="token operator">:</span> CallbackConfigType<span class="token punctuation">,</span>
+  <span class="token literal-property property">arg</span><span class="token operator">:</span> Deadline<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> callback <span class="token operator">=</span> callbackConfig<span class="token punctuation">.</span>scheduledCallback<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> finishedCalling <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    finishedCalling <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+    <span class="token comment">// always remove it from linked list</span>
+    <span class="token function">cancelScheduledWork</span><span class="token punctuation">(</span>callbackConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>finishedCalling<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// an error must have been thrown</span>
+      isIdleScheduled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span>messageKey<span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/react-16.6.html" class="prev">
+        React16.6
+      </a></span> <span class="next"><a href="/react/component.html">
+        React.Component
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99b5bf8c.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/27.eb596818.js" defer></script>
+  </body>
+</html>
