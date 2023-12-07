@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现 debounce (函数防抖) | 王亚宁的个人学习</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.d6181b04.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/17.1061e257.js" as="script"><link rel="prefetch" href="/assets/js/10.3fb17185.js"><link rel="prefetch" href="/assets/js/11.df13f98f.js"><link rel="prefetch" href="/assets/js/12.b66383ee.js"><link rel="prefetch" href="/assets/js/13.0a23e10b.js"><link rel="prefetch" href="/assets/js/14.366841cb.js"><link rel="prefetch" href="/assets/js/15.d25f8a51.js"><link rel="prefetch" href="/assets/js/16.08f21664.js"><link rel="prefetch" href="/assets/js/18.8a4c6d2b.js"><link rel="prefetch" href="/assets/js/19.85149716.js"><link rel="prefetch" href="/assets/js/20.3eb847ee.js"><link rel="prefetch" href="/assets/js/21.15e6c8fe.js"><link rel="prefetch" href="/assets/js/22.d19be237.js"><link rel="prefetch" href="/assets/js/23.f58c749b.js"><link rel="prefetch" href="/assets/js/24.31132eef.js"><link rel="prefetch" href="/assets/js/25.85eb4b5d.js"><link rel="prefetch" href="/assets/js/26.968591fe.js"><link rel="prefetch" href="/assets/js/27.aff14ef6.js"><link rel="prefetch" href="/assets/js/28.ce9ce64f.js"><link rel="prefetch" href="/assets/js/29.8db63817.js"><link rel="prefetch" href="/assets/js/3.64b6d7b3.js"><link rel="prefetch" href="/assets/js/30.2ba176e5.js"><link rel="prefetch" href="/assets/js/31.9644ac6d.js"><link rel="prefetch" href="/assets/js/32.52962b52.js"><link rel="prefetch" href="/assets/js/33.d9c1010b.js"><link rel="prefetch" href="/assets/js/34.86d8e9ce.js"><link rel="prefetch" href="/assets/js/35.397ddd83.js"><link rel="prefetch" href="/assets/js/36.1df7fc65.js"><link rel="prefetch" href="/assets/js/37.e79a8c36.js"><link rel="prefetch" href="/assets/js/38.ff716bf7.js"><link rel="prefetch" href="/assets/js/39.84c24b83.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.0b62ac91.js"><link rel="prefetch" href="/assets/js/41.cdb6b048.js"><link rel="prefetch" href="/assets/js/42.836f874d.js"><link rel="prefetch" href="/assets/js/43.b50e313c.js"><link rel="prefetch" href="/assets/js/44.b899823e.js"><link rel="prefetch" href="/assets/js/45.58edc359.js"><link rel="prefetch" href="/assets/js/46.bbbe1817.js"><link rel="prefetch" href="/assets/js/47.80a908bf.js"><link rel="prefetch" href="/assets/js/48.f6d4302a.js"><link rel="prefetch" href="/assets/js/49.42c4f7d9.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.3c483839.js"><link rel="prefetch" href="/assets/js/51.65b0a3ae.js"><link rel="prefetch" href="/assets/js/52.e8eebaf5.js"><link rel="prefetch" href="/assets/js/53.71ce7e45.js"><link rel="prefetch" href="/assets/js/54.70b9b23b.js"><link rel="prefetch" href="/assets/js/55.902a834f.js"><link rel="prefetch" href="/assets/js/56.ccfea6ae.js"><link rel="prefetch" href="/assets/js/57.98a426e4.js"><link rel="prefetch" href="/assets/js/58.48d2d884.js"><link rel="prefetch" href="/assets/js/59.64f96906.js"><link rel="prefetch" href="/assets/js/6.820ab661.js"><link rel="prefetch" href="/assets/js/60.79e25a48.js"><link rel="prefetch" href="/assets/js/61.702571c0.js"><link rel="prefetch" href="/assets/js/62.f4d96841.js"><link rel="prefetch" href="/assets/js/63.b239a95e.js"><link rel="prefetch" href="/assets/js/64.9376960a.js"><link rel="prefetch" href="/assets/js/65.40597fe8.js"><link rel="prefetch" href="/assets/js/66.aae02cce.js"><link rel="prefetch" href="/assets/js/67.dbb30cd0.js"><link rel="prefetch" href="/assets/js/68.705ba71c.js"><link rel="prefetch" href="/assets/js/69.79d30799.js"><link rel="prefetch" href="/assets/js/7.22edff0c.js"><link rel="prefetch" href="/assets/js/70.68b46478.js"><link rel="prefetch" href="/assets/js/71.5874de26.js"><link rel="prefetch" href="/assets/js/72.01d3455f.js"><link rel="prefetch" href="/assets/js/8.8733fc27.js"><link rel="prefetch" href="/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王亚宁的个人学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div><div class="nav-item"><a href="/JavaScript/深入原理/闭包.html" class="nav-link">
+  我学习的javascript
+</a></div><div class="nav-item"><a href="https://w-yaning.github.io/react-book/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jokcy react 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  我学习的react
+</a></div><div class="nav-item"><a href="/vue/v-model.html" class="nav-link">
+  我学习的vue
+</a></div><div class="nav-item"><a href="/JavaScript/深入原理/闭包.html" class="nav-link">
+  我学习的javascript
+</a></div><div class="nav-item"><a href="https://w-yaning.github.io/react-book/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jokcy react 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/JavaScript/深入原理/闭包.html" class="sidebar-link">闭包</a></li><li><a href="/JavaScript/深入原理/变量声明提升.html" class="sidebar-link">变量声明提升</a></li><li><a href="/JavaScript/深入原理/继承.html" class="sidebar-link">继承</a></li><li><a href="/JavaScript/深入原理/上下文与作用域.html" class="sidebar-link">上下文与作用域</a></li><li><a href="/JavaScript/深入原理/事件循环.html" class="sidebar-link">事件循环</a></li><li><a href="/JavaScript/深入原理/原型与原型链.html" class="sidebar-link">原型原型链</a></li><li><a href="/JavaScript/深入原理/执行上下文.html" class="sidebar-link">执行上下文与执行上下文栈</a></li><li><a href="/JavaScript/深入原理/作用域与作用域链.html" class="sidebar-link">作用域与作用域链</a></li><li><a href="/JavaScript/深入原理/this指向.html" class="sidebar-link">this 指向</a></li><li><a href="/JavaScript/手写系列/Ajax.html" class="sidebar-link">实现 Ajax</a></li><li><a href="/JavaScript/手写系列/apply.html" class="sidebar-link">实现 apply</a></li><li><a href="/JavaScript/手写系列/bind.html" class="sidebar-link">实现 bind</a></li><li><a href="/JavaScript/手写系列/call.html" class="sidebar-link">实现 call</a></li><li><a href="/JavaScript/手写系列/debounce.html" class="active sidebar-link">实现 debounce (函数防抖)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/JavaScript/手写系列/debounce.html#实现-debounce-函数防抖" class="sidebar-link">实现 debounce (函数防抖)</a></li></ul></li><li><a href="/JavaScript/手写系列/deepClone.html" class="sidebar-link">实现深度克隆 deepClone</a></li><li><a href="/JavaScript/手写系列/EventEmitter.html" class="sidebar-link">实现 EventEmitter</a></li><li><a href="/JavaScript/手写系列/instanceof.html" class="sidebar-link">实现一个 instanceof</a></li><li><a href="/JavaScript/手写系列/jsonp.html" class="sidebar-link">实现 jsonp</a></li><li><a href="/JavaScript/手写系列/new.html" class="sidebar-link">实现 new</a></li><li><a href="/JavaScript/手写系列/Promise.html" class="sidebar-link">实现 Promise</a></li><li><a href="/JavaScript/手写系列/Scheduler.html" class="sidebar-link">实现调度器 Scheduler</a></li><li><a href="/JavaScript/手写系列/throttle.html" class="sidebar-link">实现 throttle  (函数节流)</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="实现-debounce-函数防抖"><a href="#实现-debounce-函数防抖" class="header-anchor">#</a> 实现 debounce (函数防抖)</h2> <blockquote><p>事件停止触发后 n 秒才执行函数一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。</p></blockquote> <h3 id="使用场景"><a href="#使用场景" class="header-anchor">#</a> 使用场景</h3> <ul><li>浏览器窗口的 resize 事件
+<ul><li>计算窗口大小</li></ul></li> <li>拖拽时的 mousemove 事件</li> <li>键盘事件 keyup、input、click
+<ul><li>用户名、手机号、邮箱是否已存在验证</li> <li>输入框远程搜索</li> <li>防止表单重复提交</li></ul></li></ul> <h3 id="代码实现"><a href="#代码实现" class="header-anchor">#</a> 代码实现</h3> <h4 id="technologist-简单版"><a href="#technologist-简单版" class="header-anchor">#</a> 👩‍💻:technologist: 简单版</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * 简单版
+ * @param {Function} func 函数
+ * @param {Number} wait 等待时间
+ */</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">func<span class="token punctuation">,</span> wait</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">func</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="technologist-立即执行"><a href="#technologist-立即执行" class="header-anchor">#</a> 👩‍💻:technologist: 立即执行</h4> <p><strong>提示</strong>： 立即执行是指，不希望等到事件停止触发后才执行，希望立刻执行函数，然后等到停止触发 n 秒后，才可以重新触发执行。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * 有头无尾 &amp; 无头有尾
+ * @param {Function} func 函数
+ * @param {Number} wait 等待时间
+ * @param {Boolean} immediate 是否立即执行
+ */</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span> <span class="token punctuation">(</span><span class="token parameter">func<span class="token punctuation">,</span> wait<span class="token punctuation">,</span> immediate</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer<span class="token punctuation">,</span> result
+  <span class="token keyword">const</span> <span class="token function-variable function">debounced</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>immediate<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 立即执行</span>
+     <span class="token comment">// 如果已经执行过，timer 不为 null，func 不再执行，只有当停止事件触发 wait 秒后，</span>
+     <span class="token comment">//   timer 重新为 null，才会再次执行 func</span>
+      <span class="token keyword">const</span> callNow <span class="token operator">=</span> <span class="token operator">!</span>timer
+      timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        timer <span class="token operator">=</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>callNow<span class="token punctuation">)</span> result <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">func</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> result
+  <span class="token punctuation">}</span>
+
+  debounced<span class="token punctuation">.</span><span class="token function-variable function">cancel</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 取消</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    timer <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> debounced
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="参考"><a href="#参考" class="header-anchor">#</a> 参考：</h3> <ul><li><a href="https://github.com/mqyqingfeng/Blog/issues/22" target="_blank" rel="noopener noreferrer">JavaScript专题之跟着underscore学防抖 — mqyqingfeng<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/JavaScript/手写系列/call.html" class="prev">
+        实现 call
+      </a></span> <span class="next"><a href="/JavaScript/手写系列/deepClone.html">
+        实现深度克隆 deepClone
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d6181b04.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/17.1061e257.js" defer></script>
+  </body>
+</html>
